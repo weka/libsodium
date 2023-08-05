@@ -22,7 +22,7 @@ pub fn build(b: *std.build.Builder) !void {
         .optimize = optimize,
     });
 
-    const libs = [_]*LibExeObjStep{static};
+    const libs = [_]*LibExeObjStep{shared, static};
 
     const prebuilt_version_file_path = "builds/msvc/version.h";
     const version_file_path = "include/sodium/version.h";
